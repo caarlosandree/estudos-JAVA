@@ -21,5 +21,16 @@ public class Main {
 
         double media = (8.1 + 8.0 + 7.9) / 3;
         System.out.println("Média do filme: " + media);
+
+        String sinopse = """
+                Top Gun Maverick é um filme de ação e drama
+                que conta a história de um piloto de testes que se torna 
+                um piloto de guerra.
+                """;
+        System.out.println("Sinopse: " + sinopse);
+
+        int classificacao;
+        classificacao = (int)(media/2);
+        System.out.println("Classificação: " + classificacao);
     }
 }

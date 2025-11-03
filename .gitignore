@@ -1,0 +1,56 @@
+# IDEs e Editores
+.idea/
+.vscode/
+.eclipse/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+.settings/
+.metadata/
+
+# Arquivos compilados Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Diretórios de build
+bin/
+out/
+target/
+build/
+dist/
+.classes/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Sistema Operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
