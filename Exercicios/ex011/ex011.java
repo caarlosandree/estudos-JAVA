@@ -31,5 +31,6 @@ public class ex011 {
         } else { //Condição para o caso de o número de tentativas ser diferente de 10
             IO.println("Você acertou o número!");
         }
+        leitura.close();
     }
 }
