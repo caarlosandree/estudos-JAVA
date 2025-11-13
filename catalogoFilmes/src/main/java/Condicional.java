@@ -1,6 +1,6 @@
 package catalogoFilmes.src.main.java;
 
-public class condicional {
+public class Condicional {
     public static void main(String[] args) {
         int anoDeLancamento = 1986;
         boolean incluidoNoPLano = true;
