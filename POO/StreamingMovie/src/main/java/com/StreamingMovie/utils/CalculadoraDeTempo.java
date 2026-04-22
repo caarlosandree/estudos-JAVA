@@ -2,23 +2,36 @@ package utils;
 
 import models.Filme;
 import models.Serie;
+import org.jetbrains.annotations.NotNull;
 
 public class CalculadoraDeTempo {
 
-    private int tempoTotal;
+    @Deprecated
+    private int tempoTotal; // Vamos usar os tempos individuais
+    private int tempoTotalFilmes;
+    private int tempoTotalSeries;
 
+    @Deprecated
     public int getTempoTotal() {
 
         return this.tempoTotal;
     }
 
-    public void adicionarFilme(Filme titulo) {
-
-        this.tempoTotal += titulo.getDuracaoEmMinutos();
+    public int getTempoTotalFilmes() {
+        return tempoTotalFilmes;
     }
 
-    public void adicionarSerie(Serie titulo) {
+    public int getTempoTotalSeries() {
+        return tempoTotalSeries;
+    }
 
-        this.tempoTotal += titulo.getDuracaoEmMinutos();
+    public void adicionarFilme(@NotNull Filme titulo) {
+
+        this.tempoTotalFilmes += titulo.getDuracaoEmMinutos();
+    }
+
+    public void adicionarSerie(@NotNull Serie titulo) {
+
+        this.tempoTotalSeries += titulo.getDuracaoEmMinutos();
     }
 }

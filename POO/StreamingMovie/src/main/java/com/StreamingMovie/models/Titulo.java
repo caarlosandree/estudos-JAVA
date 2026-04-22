@@ -44,7 +44,7 @@ public class Titulo {
 
     // Método para imprimir a ficha técnica do filme ou série
     public void getFichaTecnica() {
-        // Verificando se o filme ou série é uma instância de Filme ou Serie
+        // Verificando se o filme ou série, é uma instância de Filme ou Serie
         if (this instanceof Filme) {
             IO.println("Nome do filme: " + nome);
         } else {

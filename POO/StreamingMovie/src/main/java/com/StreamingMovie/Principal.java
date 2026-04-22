@@ -173,15 +173,15 @@ public class Principal {
         calculadora.adicionarFilme(interestelar);
         calculadora.adicionarFilme(titanic);
 
-        // Imprimindo o tempo total
-        IO.println("\n-=-=- Tempo total -=-=-\n");
-        IO.println("Tempo total dos filmes (em horas): " + calculadora.getTempoTotal() / 60 + " hora(s)");
+        IO.println("-=-=- Tempo total -=-=-\n");
+        IO.println("Tempo total dos filmes (em horas): " + calculadora.getTempoTotalFilmes() / 60 + " hora(s)");
 
         calculadora.adicionarSerie(breakingBad);
         calculadora.adicionarSerie(lost);
         calculadora.adicionarSerie(theboys);
 
-        IO.println("Tempo total das séries (em horas): " + calculadora.getTempoTotal() / 60 + " hora(s)");
+        IO.println("-=-=- Tempo total -=-=-\n");
+        IO.println("Tempo total das séries (em horas): " + calculadora.getTempoTotalSeries() / 60 + " hora(s)");
 
     }
 }
