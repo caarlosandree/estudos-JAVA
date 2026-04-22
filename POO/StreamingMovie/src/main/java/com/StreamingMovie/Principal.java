@@ -118,12 +118,38 @@ public class Principal {
         breakingBad.getAvaliacao(5);
         breakingBad.getAvaliacao(10);
 
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2004);
+        lost.setIncluidoNoPlano(true);
+        lost.setTotalTemporadas(6);
+        lost.setEpisodiosPorTemporada(16);
+        lost.setMinutosPorEpisodio(42);
+        lost.setFinalizada(true);
+        lost.getAvaliacao(9);
+        lost.getAvaliacao(10);
+        lost.getAvaliacao(8);
+        lost.getAvaliacao(10);
+        lost.getAvaliacao(7);
+        lost.getAvaliacao(5);
+        lost.getAvaliacao(10);
+        lost.getAvaliacao(8);
+        lost.getAvaliacao(10);
+        lost.getAvaliacao(7);
+        lost.getAvaliacao(5);
+        lost.getAvaliacao(10);
+        lost.getAvaliacao(8);
+        lost.getAvaliacao(10);
+        lost.getAvaliacao(7);
+        lost.getAvaliacao(5);
+        lost.getAvaliacao(10);
+
         // Imprimindo os dados da série
         IO.println("\n-=-=- Dados da série -=-=-\n");
-        breakingBad.getFichaTecnica();
-        IO.println("Total de temporadas: " + breakingBad.getTotalTemporadas());
-        IO.println("Episódios por temporada: " + breakingBad.getEpisodiosPorTemporada());
-        if (breakingBad.isFinalizada()) {
+        lost.getFichaTecnica();
+        IO.println("Total de temporadas: " + lost.getTotalTemporadas());
+        IO.println("Episódios por temporada: " + lost.getEpisodiosPorTemporada());
+        if (lost.isFinalizada()) {
             IO.println("Série finalizada.");
         } else {
             IO.println("Em andamento.");
