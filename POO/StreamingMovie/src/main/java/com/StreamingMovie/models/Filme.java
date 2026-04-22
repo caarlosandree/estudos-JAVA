@@ -1,7 +1,9 @@
 package models;
 
+import utils.Classificacao;
+
 // Herança de Titulo
-public class Filme extends Titulo {
+public class Filme extends Titulo implements Classificacao {
 
     private String diretor;
     private int duracaoEmMinutos;
@@ -22,5 +24,9 @@ public class Filme extends Titulo {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
+    @Override
+    public int getClassificacao() {
+        return 0;
+    }
 }
 

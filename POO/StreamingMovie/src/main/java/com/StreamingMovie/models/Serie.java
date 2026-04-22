@@ -1,7 +1,9 @@
 package models;
 
+import utils.Classificacao;
+
 // Herança de Titulo
-public class Serie extends Titulo {
+public class Serie extends Titulo implements Classificacao {
 
     private int totalTemporadas;
     private int episodiosPorTemporada;
@@ -43,5 +45,10 @@ public class Serie extends Titulo {
     @Override
     public int getDuracaoEmMinutos() {
         return getTotalTemporadas() * getEpisodiosPorTemporada() * getMinutosPorEpisodio();
+    }
+
+    @Override
+    public int getClassificacao() {
+        return 0;
     }
 }
