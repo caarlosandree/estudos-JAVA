@@ -58,7 +58,7 @@ public class Titulo {
             IO.println("Não incluído no plano. Por favor, assine o plano para acessar.");
         }
         IO.println("Total de avaliações: " + totalDeAvaliacoes);
-        IO.println("Média de avaliações: " + getMediaAvaliacoes());
+        IO.println("Média de avaliações: " + String.format("%.1f", getMediaAvaliacoes()));
         // Verificando se a série está finalizada
         if (this instanceof Serie) {
             IO.println("Minutos por episódio: " + ((Serie) this).getMinutosPorEpisodio());
