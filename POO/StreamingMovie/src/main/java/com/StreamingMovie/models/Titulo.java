@@ -45,7 +45,7 @@ public class Titulo {
     // Método para imprimir a ficha técnica do filme ou série
     public void getFichaTecnica() {
         // Verificando se o filme ou série é uma instância de Filme ou Serie
-        if (Filme.class.isInstance(this)) {
+        if (this instanceof Filme) {
             IO.println("Nome do filme: " + nome);
         } else {
             IO.println("Nome da série: " + nome);
@@ -64,7 +64,7 @@ public class Titulo {
             IO.println("Minutos por episódio: " + ((Serie) this).getMinutosPorEpisodio());
         }
         // Verificando se o filme ou série tem duração em minutos
-        if (Filme.class.isInstance(this)) {
+        if (this instanceof Filme) {
             IO.println("Duração em minutos: " + getDuracaoEmMinutos());
         } else {
             IO.println("Minutos por temporada: " + getDuracaoEmMinutos());
