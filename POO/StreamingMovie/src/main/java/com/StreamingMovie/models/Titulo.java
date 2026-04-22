@@ -1,13 +1,16 @@
 package models;
 
+import utils.Classificacao;
+
 // Classe abstrata
-public class Titulo {
+public abstract class Titulo {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double avaliacao;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
+    private boolean recomendacao;
 
     public String setNome(String nome) {
         this.nome = nome;
@@ -70,4 +73,17 @@ public class Titulo {
             IO.println("Minutos por temporada: " + getDuracaoEmMinutos());
         }
     }
+
+    public double getClassificacao() {
+        return (double) getMediaAvaliacoes() / 2 ;
+    }
+
+    public void setRecomendacao(boolean recomendacao) {
+        this.recomendacao = recomendacao;
+    }
+
+    public boolean getRecomendacao() {
+        return recomendacao;
+    }
+
 }

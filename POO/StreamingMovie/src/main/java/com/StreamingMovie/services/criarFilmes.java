@@ -26,6 +26,7 @@ public class criarFilmes {
             interestelar.getAvaliacao(nota);
         }
 
+
         return new Filme[] { titanic, interestelar };
     }
 }

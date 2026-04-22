@@ -46,9 +46,4 @@ public class Serie extends Titulo implements Classificacao {
     public int getDuracaoEmMinutos() {
         return getTotalTemporadas() * getEpisodiosPorTemporada() * getMinutosPorEpisodio();
     }
-
-    @Override
-    public double getClassificacao() {
-        return (double) getMediaAvaliacoes() / 2 ;
-    }
 }

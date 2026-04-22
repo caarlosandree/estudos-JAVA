@@ -3,7 +3,7 @@ import models.Filme;
 import models.Serie;
 import services.criarFilmes;
 import services.criarSeries;
-import utils.ArredondarParaMeio;
+import utils.CalcRecomendacao;
 import utils.CalculadoraDeTempo;
 
 import static utils.ArredondarParaMeio.arredondar;
@@ -19,6 +19,7 @@ public class Principal {
         IO.println("-=-=- Dados do filme -=-=-\n");
         interestelar.getFichaTecnica();
         IO.println("Classificação: " + String.format("%.1f", arredondar(interestelar.getClassificacao())) + " estrelas");
+        CalcRecomendacao.calcularRecomendacao(interestelar);
 
         // Criando o objeto filme
         Filme titanic = criarFilmes.filmes() [0];
@@ -26,6 +27,7 @@ public class Principal {
         IO.println("\n-=-=- Dados do filme -=-=-\n");
         titanic.getFichaTecnica();
         IO.println("Classificação: " + String.format("%.1f", arredondar(titanic.getClassificacao())) + " estrelas");
+        CalcRecomendacao.calcularRecomendacao(titanic);
 
        // Criando o objeto série
        Serie theboys = criarSeries.series() [0];
@@ -43,6 +45,7 @@ public class Principal {
             IO.println("Em andamento.");
         }
         IO.println("Classificação: " + String.format("%.1f", arredondar(theboys.getClassificacao())) + " estrelas");
+        CalcRecomendacao.calcularRecomendacao(theboys);
 
         // Imprimindo os dados da série
         IO.println("\n-=-=- Dados da série -=-=-\n");
@@ -55,6 +58,7 @@ public class Principal {
             IO.println("Em andamento.");
         }
         IO.println("Classificação: " + String.format("%.1f", arredondar(breakingBad.getClassificacao())) + " estrelas");
+        CalcRecomendacao.calcularRecomendacao(breakingBad);
 
         // Imprimindo os dados da série
         IO.println("\n-=-=- Dados da série -=-=-\n");
@@ -67,6 +71,7 @@ public class Principal {
             IO.println("Em andamento.");
         }
         IO.println("Classificação: " + String.format("%.1f", arredondar(lost.getClassificacao())) + " estrelas");
+        CalcRecomendacao.calcularRecomendacao(lost);
 
         // Criando o objeto calculadora de tempo
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();

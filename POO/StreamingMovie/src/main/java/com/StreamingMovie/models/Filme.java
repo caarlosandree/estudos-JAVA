@@ -24,9 +24,5 @@ public class Filme extends Titulo implements Classificacao {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    @Override
-    public double getClassificacao() {
-        return (double) getMediaAvaliacoes() / 2 ;
-    }
 }
 
