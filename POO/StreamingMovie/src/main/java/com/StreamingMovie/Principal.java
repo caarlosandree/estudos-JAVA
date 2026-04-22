@@ -118,6 +118,18 @@ public class Principal {
         breakingBad.getAvaliacao(5);
         breakingBad.getAvaliacao(10);
 
+
+        // Imprimindo os dados da série
+        IO.println("\n-=-=- Dados da série -=-=-\n");
+        breakingBad.getFichaTecnica();
+        IO.println("Total de temporadas: " + breakingBad.getTotalTemporadas());
+        IO.println("Episódios por temporada: " + breakingBad.getEpisodiosPorTemporada());
+        if (breakingBad.isFinalizada()) {
+            IO.println("Série finalizada.");
+        } else {
+            IO.println("Em andamento.");
+        }
+
         Serie lost = new Serie();
         lost.setNome("Lost");
         lost.setAnoDeLancamento(2004);
@@ -158,12 +170,18 @@ public class Principal {
         // Criando o objeto calculadora de tempo
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         // Adicionando o filme e a série à calculadora
-        calculadora.adicionarTitulo(interestelar);
-        calculadora.adicionarTitulo(theboys);
-        calculadora.adicionarTitulo(titanic);
+        calculadora.adicionarFilme(interestelar);
+        calculadora.adicionarFilme(titanic);
+
         // Imprimindo o tempo total
         IO.println("\n-=-=- Tempo total -=-=-\n");
-        IO.println("Tempo total (em horas): " + calculadora.getTempoTotal() / 60 + " hora(s)");
+        IO.println("Tempo total dos filmes (em horas): " + calculadora.getTempoTotal() / 60 + " hora(s)");
+
+        calculadora.adicionarSerie(breakingBad);
+        calculadora.adicionarSerie(lost);
+        calculadora.adicionarSerie(theboys);
+
+        IO.println("Tempo total das séries (em horas): " + calculadora.getTempoTotal() / 60 + " hora(s)");
 
     }
 }
