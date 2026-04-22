@@ -1,6 +1,8 @@
 package models;
 
-public class Episodio extends Serie {
+import utils.Classificacao;
+
+public class Episodio implements Classificacao {
     private int numeroEpisodio;
     private String nomeEpisodio;
     private boolean assistido;
@@ -54,5 +56,17 @@ public class Episodio extends Serie {
 
     public void setSerie(Serie serie) {
         this.serie = serie;
+    }
+
+    private int totalDeAvaliacoes;
+
+    public double getMediaEpisodio() {
+        return notaEpisodio / totalDeAvaliacoes;
+    }
+
+    @Override
+    public double getClassificacao() {
+
+        return (double) getMediaEpisodio() / 2;
     }
 }

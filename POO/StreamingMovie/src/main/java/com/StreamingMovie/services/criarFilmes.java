@@ -25,6 +25,7 @@ public class criarFilmes {
         for (double nota : notasInterestelar) {
             interestelar.getAvaliacao(nota);
         }
+
         return new Filme[] { titanic, interestelar };
     }
 }

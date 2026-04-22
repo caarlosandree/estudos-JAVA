@@ -2,5 +2,5 @@ package utils;
 
 public interface Classificacao {
 
-    int getClassificacao();
+    double getClassificacao();
 }

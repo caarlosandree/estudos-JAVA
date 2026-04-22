@@ -30,7 +30,7 @@ public class Titulo {
         totalDeAvaliacoes++;
     }
 
-    private double getMediaAvaliacoes() {
+    public double getMediaAvaliacoes() {
         return avaliacao / totalDeAvaliacoes;
     }
 
