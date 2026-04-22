@@ -9,15 +9,16 @@ public class CalculadoraDeTempo {
 
     public int getTempoTotal() {
 
-        return tempoTotal;
+        return this.tempoTotal;
     }
 
     public void adicionarFilme(Filme titulo) {
 
-        tempoTotal += titulo.getDuracaoEmMinutos();
+        this.tempoTotal += titulo.getDuracaoEmMinutos();
     }
 
     public void adicionarSerie(Serie titulo) {
-        tempoTotal += titulo.getDuracaoEmMinutos();
+
+        this.tempoTotal += titulo.getDuracaoEmMinutos();
     }
 }
