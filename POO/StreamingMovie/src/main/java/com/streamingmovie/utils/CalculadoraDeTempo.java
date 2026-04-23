@@ -1,7 +1,7 @@
-package com.streamingmovie.utils;
+package utils;
 
-import com.streamingmovie.models.Filme;
-import com.streamingmovie.models.Serie;
+import models.Filme;
+import models.Serie;
 
 public class CalculadoraDeTempo {
 

@@ -1,7 +1,7 @@
-package com.streamingmovie.services;
+package services;
 
-import com.streamingmovie.models.Serie;
-import com.streamingmovie.models.Episodio;
+import models.Serie;
+import models.Episodio;
 
 public class CriarEpisodios {
 

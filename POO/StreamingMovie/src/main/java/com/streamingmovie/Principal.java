@@ -1,16 +1,14 @@
-package com.streamingmovie;
-
 // Importação de classes
-import com.streamingmovie.models.Filme;
-import com.streamingmovie.models.Serie;
-import com.streamingmovie.models.Episodio;
-import com.streamingmovie.services.CriarFilmes;
-import com.streamingmovie.services.CriarSeries;
-import com.streamingmovie.services.CriarEpisodios;
-import com.streamingmovie.utils.CalcRecomendacao;
-import com.streamingmovie.utils.CalculadoraDeTempo;
+import models.Filme;
+import models.Serie;
+import models.Episodio;
+import services.CriarFilmes;
+import services.CriarSeries;
+import services.CriarEpisodios;
+import utils.CalcRecomendacao;
+import utils.CalculadoraDeTempo;
 
-import static com.streamingmovie.utils.ArredondarParaMeio.arredondar;
+import static utils.ArredondarParaMeio.arredondar;
 import java.util.ArrayList;
 import java.util.Scanner;
 

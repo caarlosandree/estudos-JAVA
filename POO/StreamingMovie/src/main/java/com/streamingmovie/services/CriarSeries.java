@@ -1,6 +1,6 @@
-package com.streamingmovie.services;
+package services;
 
-import com.streamingmovie.models.Serie;
+import models.Serie;
 
 import java.util.ArrayList;
 

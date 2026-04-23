@@ -1,4 +1,4 @@
-package com.streamingmovie.utils;
+package utils;
 
 public class ArredondarParaMeio {
     public static double arredondar(double numero) {

@@ -1,6 +1,6 @@
-package com.streamingmovie.models;
+package models;
 
-import com.streamingmovie.utils.Classificacao;
+import utils.Classificacao;
 import java.util.ArrayList;
 
 // Herança de Titulo

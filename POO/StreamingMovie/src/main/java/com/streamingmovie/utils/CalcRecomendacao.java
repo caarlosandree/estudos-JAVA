@@ -1,6 +1,6 @@
-package com.streamingmovie.utils;
+package utils;
 
-import com.streamingmovie.models.Titulo;
+import models.Titulo;
 
 public class CalcRecomendacao {
 

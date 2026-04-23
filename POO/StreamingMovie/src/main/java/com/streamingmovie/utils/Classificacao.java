@@ -1,4 +1,4 @@
-package com.streamingmovie.utils;
+package utils;
 
 public interface Classificacao {
 
