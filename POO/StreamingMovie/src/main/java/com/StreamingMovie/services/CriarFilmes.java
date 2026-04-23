@@ -2,7 +2,7 @@ package services;
 
 import models.Filme;
 
-public class criarFilmes {
+public class CriarFilmes {
     public static Filme[] filmes() {
         Filme titanic = new Filme();
         titanic.setNome("Titanic");

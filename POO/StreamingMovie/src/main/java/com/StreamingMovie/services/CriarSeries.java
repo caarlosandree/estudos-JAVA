@@ -2,7 +2,7 @@ package services;
 
 import models.Serie;
 
-public class criarSeries {
+public class CriarSeries {
     public static Serie[] series() {
         Serie theBoys = new Serie();
         theBoys.setNome("The Boys");
