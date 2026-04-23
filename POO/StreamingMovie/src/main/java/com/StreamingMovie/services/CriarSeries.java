@@ -10,7 +10,7 @@ public class CriarSeries {
         theBoys.setIncluidoNoPlano(false);
         theBoys.setTotalTemporadas(3);
         theBoys.setEpisodiosPorTemporada(10);
-        theBoys.setMinutosPorEpisodio(45);
+        theBoys.setMinutosPorEpisodio(58);
         theBoys.setFinalizada(true);
 
         // Avaliações
@@ -25,7 +25,7 @@ public class CriarSeries {
         breakingBad.setIncluidoNoPlano(true);
         breakingBad.setTotalTemporadas(5);
         breakingBad.setEpisodiosPorTemporada(10);
-        breakingBad.setMinutosPorEpisodio(45);
+        breakingBad.setMinutosPorEpisodio(48);
         breakingBad.setFinalizada(false);
 
         // Avaliações
@@ -39,7 +39,7 @@ public class CriarSeries {
         lost.setAnoDeLancamento(2004);
         lost.setIncluidoNoPlano(true);
         lost.setTotalTemporadas(6);
-        lost.setEpisodiosPorTemporada(16);
+        lost.setEpisodiosPorTemporada(20);
         lost.setMinutosPorEpisodio(42);
         lost.setFinalizada(false);
 
