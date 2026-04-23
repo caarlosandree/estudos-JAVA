@@ -2,8 +2,12 @@ package services;
 
 import models.Serie;
 
+import java.util.ArrayList;
+
 public class CriarSeries {
-    public static Serie[] series() {
+    public static ArrayList<Serie> series() {
+
+        ArrayList<Serie> listaSeries = new ArrayList<>();
         Serie theBoys = new Serie();
         theBoys.setNome("The Boys");
         theBoys.setAnoDeLancamento(2019);
@@ -18,6 +22,7 @@ public class CriarSeries {
         for (double nota : notasTheBoys) {
             theBoys.getAvaliacao(nota);
         }
+        listaSeries.add(theBoys);
 
         Serie breakingBad = new Serie();
         breakingBad.setNome("Breaking Bad");
@@ -33,6 +38,7 @@ public class CriarSeries {
         for (double nota : notasBreakingBad) {
             breakingBad.getAvaliacao(nota);
         }
+        listaSeries.add(breakingBad);
 
         Serie lost = new Serie();
         lost.setNome("Lost");
@@ -48,8 +54,9 @@ public class CriarSeries {
         for (double nota : notasLost) {
             lost.getAvaliacao(nota);
         }
+        listaSeries.add(lost);
 
-        return new Serie[] { theBoys, breakingBad, lost };
+        return listaSeries;
     }
 
 }

@@ -2,8 +2,13 @@ package services;
 
 import models.Filme;
 
+import java.util.ArrayList;
+
 public class CriarFilmes {
-    public static Filme[] filmes() {
+    public static ArrayList<Filme> filmes() {
+
+        ArrayList<Filme> listaFilmes = new ArrayList<>();
+
         Filme titanic = new Filme();
         titanic.setNome("Titanic");
         titanic.setAnoDeLancamento(1997);
@@ -14,6 +19,7 @@ public class CriarFilmes {
         for (double nota : notasTitanic) {
             titanic.getAvaliacao(nota);
         }
+        listaFilmes.add(titanic);
 
         Filme interestelar = new Filme();
         interestelar.setNome("Interestelar");
@@ -25,8 +31,8 @@ public class CriarFilmes {
         for (double nota : notasInterestelar) {
             interestelar.getAvaliacao(nota);
         }
+        listaFilmes.add(interestelar);
 
-
-        return new Filme[] { titanic, interestelar };
+        return listaFilmes;
     }
 }

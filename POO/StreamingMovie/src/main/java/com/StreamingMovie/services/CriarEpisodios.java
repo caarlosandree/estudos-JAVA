@@ -5,7 +5,7 @@ import models.Episodio;
 
 public class CriarEpisodios {
     public static Episodio[] episodios() {
-        Serie[] series = CriarSeries.series();
+        Serie[] series = CriarSeries.series().toArray(new Serie[0]);
         Serie theBoys = series[0];
         Serie breakingBad = series[1];
         Serie lost = series[2];
