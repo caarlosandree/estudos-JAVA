@@ -69,4 +69,12 @@ public class Episodio implements Classificacao {
 
         return (double) getMediaEpisodio() / 2;
     }
+
+    // Método para exibir as informações do episódio
+    public void exibirInformacoes() {
+        System.out.println("\n  Episódio " + numeroEpisodio + " - " + nomeEpisodio);
+        System.out.println("  Duração: " + duracaoEpisodio + " minutos");
+        System.out.println("  Nota: " + (notaEpisodio > 0 ? String.format("%.1f", notaEpisodio) : "Não avaliado"));
+        System.out.println("  Status: " + (assistido ? "✓ Assistido" : "○ Não assistido"));
+    }
 }

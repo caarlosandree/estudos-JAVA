@@ -2,7 +2,6 @@ package com.streamingmovie.utils;
 
 import com.streamingmovie.models.Filme;
 import com.streamingmovie.models.Serie;
-import org.jetbrains.annotations.NotNull;
 
 public class CalculadoraDeTempo {
 
@@ -25,12 +24,12 @@ public class CalculadoraDeTempo {
         return tempoTotalSeries;
     }
 
-    public void adicionarFilme(@NotNull Filme titulo) {
+    public void adicionarFilme(Filme titulo) {
 
         this.tempoTotalFilmes += titulo.getDuracaoEmMinutos();
     }
 
-    public void adicionarSerie(@NotNull Serie titulo) {
+    public void adicionarSerie(Serie titulo) {
 
         this.tempoTotalSeries += titulo.getDuracaoEmMinutos();
     }

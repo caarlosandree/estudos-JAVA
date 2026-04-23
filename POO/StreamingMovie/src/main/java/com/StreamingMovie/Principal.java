@@ -3,8 +3,10 @@ package com.streamingmovie;
 // Importação de classes
 import com.streamingmovie.models.Filme;
 import com.streamingmovie.models.Serie;
+import com.streamingmovie.models.Episodio;
 import com.streamingmovie.services.CriarFilmes;
 import com.streamingmovie.services.CriarSeries;
+import com.streamingmovie.services.CriarEpisodios;
 import com.streamingmovie.utils.CalcRecomendacao;
 import com.streamingmovie.utils.CalculadoraDeTempo;
 
@@ -22,6 +24,11 @@ public class Principal {
         // Obtendo o ArrayList de filmes e séries
         ArrayList<Filme> filmes = CriarFilmes.filmes();
         ArrayList<Serie> series = CriarSeries.series();
+
+        // Populando os episódios das séries
+        if (series.size() >= 3) {
+            CriarEpisodios.popularEpisodios(series.get(0), series.get(1), series.get(2));
+        }
 
         // Criando o objeto calculadora de tempo
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -151,12 +158,60 @@ public class Principal {
             scanner.nextLine();
 
             if (escolhaTemporada > 0 && escolhaTemporada <= serie.getTotalTemporadas()) {
-                System.out.println("\n-=-=- Episódios da Temporada " + escolhaTemporada + " -=-=-");
+                ArrayList<Episodio> episodiosTemporada = serie.getEpisodiosPorTemporada(escolhaTemporada);
+
+                System.out.println("\n╔════════════════════════════════════════════════════════════════╗");
+                System.out.println("║               EPISÓDIOS DA TEMPORADA " + escolhaTemporada + "                          ║");
+                System.out.println("╚════════════════════════════════════════════════════════════════╝");
                 System.out.println("Série: " + serie.getNome());
-                System.out.println("Episódios por temporada: " + serie.getEpisodiosPorTemporada());
-                System.out.println("Minutos por episódio: " + serie.getMinutosPorEpisodio());
-                System.out.println("Total de episódios nesta temporada: " + serie.getEpisodiosPorTemporada());
-                System.out.println("Duração total da temporada: " + (serie.getEpisodiosPorTemporada() * serie.getMinutosPorEpisodio()) + " minutos");
+                System.out.println("Temporada: " + escolhaTemporada);
+                System.out.println("Total de episódios nesta temporada: " + episodiosTemporada.size());
+                if (episodiosTemporada.size() > 0) {
+                    int duracaoTotal = episodiosTemporada.size() * episodiosTemporada.get(0).getDuracaoEpisodio();
+                    System.out.println("Duração total da temporada: " + duracaoTotal + " minutos (" + (duracaoTotal / 60) + "h " + (duracaoTotal % 60) + "min)");
+                }
+                System.out.println();
+
+                if (episodiosTemporada.isEmpty()) {
+                    System.out.println("Nenhum episódio disponível para esta temporada.");
+                } else {
+                    // Calcular estatísticas
+                    double notaMedia = 0;
+                    int assistidos = 0;
+                    for (Episodio ep : episodiosTemporada) {
+                        notaMedia += ep.getNotaEpisodio();
+                        if (ep.isAssistido()) {
+                            assistidos++;
+                        }
+                    }
+                    notaMedia /= episodiosTemporada.size();
+
+                    System.out.println("Nota média: " + String.format("%.1f", notaMedia) + " ⭐");
+                    System.out.println("Episódios assistidos: " + assistidos + "/" + episodiosTemporada.size());
+                    System.out.println("\n" + "─".repeat(64));
+
+                    // Listar todos os episódios
+                    for (int i = 0; i < episodiosTemporada.size(); i++) {
+                        Episodio ep = episodiosTemporada.get(i);
+                        String status = ep.isAssistido() ? "✓" : "○";
+                        System.out.println("\n[" + (i + 1) + "] Episódio " + ep.getNumeroEpisodio() + " - " + ep.getNomeEpisodio());
+                        System.out.println("    Status: " + status + " " + (ep.isAssistido() ? "Assistido" : "Não assistido"));
+                        System.out.println("    Duração: " + ep.getDuracaoEpisodio() + " minutos");
+                        System.out.println("    Nota: " + (ep.getNotaEpisodio() > 0 ? String.format("%.1f", ep.getNotaEpisodio()) : "Não avaliado") + " ⭐");
+                    }
+
+                    System.out.println("\n" + "─".repeat(64));
+                    System.out.print("\nDeseja marcar um episódio como assistido? (número ou 0 para voltar): ");
+                    int escolhaEpisodio = scanner.nextInt();
+                    scanner.nextLine();
+
+                    if (escolhaEpisodio > 0 && escolhaEpisodio <= episodiosTemporada.size()) {
+                        Episodio episodioSelecionado = episodiosTemporada.get(escolhaEpisodio - 1);
+                        episodioSelecionado.setAssistido(!episodioSelecionado.isAssistido());
+                        String novo_status = episodioSelecionado.isAssistido() ? "marcado como assistido" : "marcado como não assistido";
+                        System.out.println("\n✓ Episódio " + episodioSelecionado.getNumeroEpisodio() + " " + novo_status + "!");
+                    }
+                }
             } else if (escolhaTemporada != 0) {
                 System.out.println("Opção inválida!");
             }
