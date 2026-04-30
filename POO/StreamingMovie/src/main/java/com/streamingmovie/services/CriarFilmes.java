@@ -1,6 +1,7 @@
 package services;
 
 import model.Filme;
+import model.Titulo;
 
 import java.util.ArrayList;
 
@@ -9,8 +10,7 @@ public class CriarFilmes {
 
         ArrayList<Filme> listaFilmes = new ArrayList<>();
 
-        Filme titanic = new Filme("Titanic");
-        titanic.setAnoDeLancamento(1997);
+        Filme titanic = new Filme("Titanic", 1997);
         titanic.setIncluidoNoPlano(true);
         titanic.setDuracaoEmMinutos(194);
         // Avaliações
@@ -20,8 +20,7 @@ public class CriarFilmes {
         }
         listaFilmes.add(titanic);
 
-        Filme interestelar = new Filme("Interestelar");
-        interestelar.setAnoDeLancamento(2014);
+        Filme interestelar = new Filme("Interestelar", 2014);
         interestelar.setIncluidoNoPlano(true);
         interestelar.setDuracaoEmMinutos(169);
         // Avaliações
@@ -31,8 +30,7 @@ public class CriarFilmes {
         }
         listaFilmes.add(interestelar);
 
-        Filme avatar = new Filme("Avatar");
-        avatar.setAnoDeLancamento(2009);
+        Filme avatar = new Filme("Avatar", 2009);
         avatar.setIncluidoNoPlano(true);
         avatar.setDuracaoEmMinutos(162);
         // Avaliações

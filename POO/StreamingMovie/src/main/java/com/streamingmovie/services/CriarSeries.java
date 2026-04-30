@@ -8,9 +8,7 @@ public class CriarSeries {
     public static ArrayList<Serie> series() {
 
         ArrayList<Serie> listaSeries = new ArrayList<>();
-        Serie theBoys = new Serie();
-        theBoys.setNome("The Boys");
-        theBoys.setAnoDeLancamento(2019);
+        Serie theBoys = new Serie("The Boys", 2019);
         theBoys.setIncluidoNoPlano(false);
         theBoys.setTotalTemporadas(3);
         theBoys.setEpisodiosPorTemporada(10);
@@ -24,9 +22,7 @@ public class CriarSeries {
         }
         listaSeries.add(theBoys);
 
-        Serie breakingBad = new Serie();
-        breakingBad.setNome("Breaking Bad");
-        breakingBad.setAnoDeLancamento(2008);
+        Serie breakingBad = new Serie("Breaking Bad", 2008);
         breakingBad.setIncluidoNoPlano(true);
         breakingBad.setTotalTemporadas(5);
         breakingBad.setEpisodiosPorTemporada(10);
@@ -40,9 +36,7 @@ public class CriarSeries {
         }
         listaSeries.add(breakingBad);
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2004);
+        Serie lost = new Serie("Lost", 2004);
         lost.setIncluidoNoPlano(true);
         lost.setTotalTemporadas(6);
         lost.setEpisodiosPorTemporada(20);

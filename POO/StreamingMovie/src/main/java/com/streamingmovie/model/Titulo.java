@@ -10,6 +10,11 @@ public abstract class Titulo {
     private int duracaoEmMinutos;
     private boolean recomendacao;
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }

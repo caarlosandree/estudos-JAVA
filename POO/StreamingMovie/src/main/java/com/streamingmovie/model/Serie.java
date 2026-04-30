@@ -12,6 +12,10 @@ public class Serie extends Titulo implements Classificacao {
     private boolean finalizada;
     private ArrayList<ArrayList<Episodio>> episodios; // Matriz 2D: temporada -> episódios
 
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
     public int getTotalTemporadas() {
         return totalTemporadas;
     }
