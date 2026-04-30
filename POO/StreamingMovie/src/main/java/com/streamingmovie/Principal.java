@@ -1,7 +1,7 @@
 // Importação de classes
-import models.Filme;
-import models.Serie;
-import models.Episodio;
+import model.Filme;
+import model.Serie;
+import model.Episodio;
 import services.CriarFilmes;
 import services.CriarSeries;
 import services.CriarEpisodios;

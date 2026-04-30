@@ -1,6 +1,6 @@
 package utils;
 
-import models.Titulo;
+import model.Titulo;
 
 public class CalcRecomendacao {
 

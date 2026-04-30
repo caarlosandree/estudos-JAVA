@@ -1,6 +1,6 @@
 package services;
 
-import models.Serie;
+import model.Serie;
 
 import java.util.ArrayList;
 

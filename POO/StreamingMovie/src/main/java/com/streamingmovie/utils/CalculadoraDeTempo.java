@@ -1,7 +1,7 @@
 package utils;
 
-import models.Filme;
-import models.Serie;
+import model.Filme;
+import model.Serie;
 
 public class CalculadoraDeTempo {
 

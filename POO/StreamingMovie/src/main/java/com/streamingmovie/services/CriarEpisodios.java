@@ -1,7 +1,7 @@
 package services;
 
-import models.Serie;
-import models.Episodio;
+import model.Serie;
+import model.Episodio;
 
 public class CriarEpisodios {
 

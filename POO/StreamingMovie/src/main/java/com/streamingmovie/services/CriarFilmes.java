@@ -1,6 +1,6 @@
 package services;
 
-import models.Filme;
+import model.Filme;
 
 import java.util.ArrayList;
 
