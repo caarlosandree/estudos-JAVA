@@ -50,9 +50,9 @@ public class CriarEpisodios {
     }
 
     private static void criarEpisodiosBreakingBad(Serie breakingBad) {
-        // Temporada 1
-        String[] nomesTmp1 = {"Pilot", "Cat's in the Bag", "And the Bag's", "Cancer Man", "Gray Matter",
-                             "Crazy Handful", "No Rough Stuff", "Seven Thirty-Seven", "Down", "Over"};
+        // Temporada 1 - 7 episódios
+        String[] nomesTmp1 = {"Pilot", "Cat's in the Bag...", "...And the Bag's in the River", "Cancer Man", "Gray Matter",
+                             "Crazy Handful of Nothin'", "A No-Rough-Stuff-Type Deal"};
         for (int i = 0; i < nomesTmp1.length; i++) {
             Episodio ep = criarEpisodio(i + 1, nomesTmp1[i], 48, 9.5 - (i * 0.05), breakingBad);
             breakingBad.adicionarEpisodio(1, ep);
@@ -61,19 +61,38 @@ public class CriarEpisodios {
         // Temporada 2 - 13 episódios
         String[] nomesTmp2 = {"Seven Thirty-Seven", "Grilled", "Bit by a Dead Bee", "Down", "Breakage",
                              "Peekaboo", "Negro y Azul", "Better Call Saul", "Four Days Out", "Over",
-                             "Phoenix", "Half Measures", "Full Measure"};
+                             "Phoenix", "ABQ", "Half Measures"};
         for (int i = 0; i < nomesTmp2.length; i++) {
             Episodio ep = criarEpisodio(i + 1, nomesTmp2[i], 48, 9.4 - (i * 0.03), breakingBad);
             breakingBad.adicionarEpisodio(2, ep);
         }
 
-        // Temporada 3-5 (simplificado)
-        for (int temp = 3; temp <= 5; temp++) {
-            int episodiosTemp = temp == 3 ? 13 : 14;
-            for (int i = 1; i <= episodiosTemp; i++) {
-                Episodio ep = criarEpisodio(i, "Episódio " + i, 48, 9.3, breakingBad);
-                breakingBad.adicionarEpisodio(temp, ep);
-            }
+        // Temporada 3 - 13 episódios
+        String[] nomesTmp3 = {"No Más", "Caballo Sin Nombre", "I.F.T.", "Green Light", "Más",
+                             "Sunset", "One Minute", "I See You", "Kafkaesque", "Fly",
+                             "Abiquiu", "Half Measures", "Full Measure"};
+        for (int i = 0; i < nomesTmp3.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp3[i], 48, 9.3 - (i * 0.03), breakingBad);
+            breakingBad.adicionarEpisodio(3, ep);
+        }
+
+        // Temporada 4 - 13 episódios
+        String[] nomesTmp4 = {"Box Cutter", "Thirty-Eight Snub", "Open House", "Bullet Points",
+                             "Cornered", "Problem Dog", "Hermanos", "Salud", "Crawl Space",
+                             "Bug", "Hazard Pay", "End Times", "Face Off"};
+        for (int i = 0; i < nomesTmp4.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp4[i], 48, 9.2 - (i * 0.03), breakingBad);
+            breakingBad.adicionarEpisodio(4, ep);
+        }
+
+        // Temporada 5 - 16 episódios
+        String[] nomesTmp5 = {"Live Free or Die", "Madrigal", "Hazard Pay", "Fifty-One",
+                             "Dead Freight", "Buyout", "Say My Name", "Gliding Over All",
+                             "Blood Money", "Buried", "Confessions", "Rabid Dog",
+                             "To'hajiilee", "Ozymandias", "Granite State", "Felina"};
+        for (int i = 0; i < nomesTmp5.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp5[i], 48, 9.1 - (i * 0.03), breakingBad);
+            breakingBad.adicionarEpisodio(5, ep);
         }
     }
 
@@ -89,13 +108,56 @@ public class CriarEpisodios {
             lost.adicionarEpisodio(1, ep);
         }
 
-        // Temporadas 2-6 (populadas com nomes genéricos)
-        int[] episodiosPorTemp = {24, 23, 14, 17, 18};
-        for (int temp = 2; temp <= 6; temp++) {
-            for (int i = 1; i <= episodiosPorTemp[temp - 2]; i++) {
-                Episodio ep = criarEpisodio(i, "Episódio " + i, 42, 8.8, lost);
-                lost.adicionarEpisodio(temp, ep);
-            }
+        // Temporada 2 - 24 episódios
+        String[] nomesTmp2 = {"Man of Science, Man of Faith", "Adrift", "Orientation", "Everybody Hates Hugo",
+                             "...And Found", "Abandoned", "The Other 48 Days", "Collision", "What Kate Did",
+                             "The 23rd Psalm", "The Hunting Party", "Fire + Water", "The Long Con", "One of Them",
+                             "Maternity Leave", "The Whole Truth", "Lockdown", "Dave", "S.O.S.", "Two for the Road",
+                             "?", "Three Minutes", "Live Together, Die Alone: Part 1", "Live Together, Die Alone: Part 2"};
+        for (int i = 0; i < nomesTmp2.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp2[i], 42, 8.9 - (i * 0.02), lost);
+            lost.adicionarEpisodio(2, ep);
+        }
+
+        // Temporada 3 - 23 episódios
+        String[] nomesTmp3 = {"A Tale of Two Cities", "The Glass Ballerina", "Further Instructions", "Every Man for Himself",
+                             "The Cost of Living", "I Do", "Not in Portland", "Flashes Before Your Eyes", "Stranger in a Strange Land",
+                             "Tricia Tanaka Is Dead", "Enter 77", "Par Avion", "The Man from Tallahassee", "Exposé",
+                             "Left Behind", "One of Us", "Catch-22", "D.O.C.", "The Brig", "The Man Behind the Curtain",
+                             "Greatest Hits", "Through the Looking Glass: Part 1", "Through the Looking Glass: Part 2"};
+        for (int i = 0; i < nomesTmp3.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp3[i], 42, 8.8 - (i * 0.02), lost);
+            lost.adicionarEpisodio(3, ep);
+        }
+
+        // Temporada 4 - 14 episódios
+        String[] nomesTmp4 = {"The Beginning of the End", "Confirmed Dead", "The Economist", "Eggtown",
+                             "The Constant", "The Other Woman", "Ji Yeon", "Meet Kevin Johnson",
+                             "The Shape of Things to Come", "Something Nice Back Home", "Cabin Fever",
+                             "There's No Place Like Home: Part 1", "There's No Place Like Home: Part 2", "There's No Place Like Home: Part 3"};
+        for (int i = 0; i < nomesTmp4.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp4[i], 42, 8.7 - (i * 0.02), lost);
+            lost.adicionarEpisodio(4, ep);
+        }
+
+        // Temporada 5 - 17 episódios
+        String[] nomesTmp5 = {"Because You Left", "The Lie", "Jughead", "The Little Prince",
+                             "This Place Is Death", "316", "The Life and Death of Jeremy Bentham", "LaFleur",
+                             "Namaste", "He's Our You", "Whatever Happened, Happened", "Dead Is Dead",
+                             "Some Like It Hoth", "The Variable", "Follow the Leader", "The Incident: Part 1", "The Incident: Part 2"};
+        for (int i = 0; i < nomesTmp5.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp5[i], 42, 8.6 - (i * 0.02), lost);
+            lost.adicionarEpisodio(5, ep);
+        }
+
+        // Temporada 6 - 18 episódios
+        String[] nomesTmp6 = {"LA X: Part 1", "LA X: Part 2", "What Kate Does", "The Substitute",
+                             "Lighthouse", "Sundown", "Dr. Linus", "Recon", "Ab Aeterno",
+                             "The Package", "Happily Ever After", "Everybody Loves Hugo", "The Last Recruit",
+                             "The Candidate", "Across the Sea", "What They Died For", "The End: Part 1", "The End: Part 2"};
+        for (int i = 0; i < nomesTmp6.length; i++) {
+            Episodio ep = criarEpisodio(i + 1, nomesTmp6[i], 42, 8.5 - (i * 0.02), lost);
+            lost.adicionarEpisodio(6, ep);
         }
     }
 
