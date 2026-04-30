@@ -9,8 +9,7 @@ public class CriarFilmes {
 
         ArrayList<Filme> listaFilmes = new ArrayList<>();
 
-        Filme titanic = new Filme();
-        titanic.setNome("Titanic");
+        Filme titanic = new Filme("Titanic");
         titanic.setAnoDeLancamento(1997);
         titanic.setIncluidoNoPlano(true);
         titanic.setDuracaoEmMinutos(194);
@@ -21,8 +20,7 @@ public class CriarFilmes {
         }
         listaFilmes.add(titanic);
 
-        Filme interestelar = new Filme();
-        interestelar.setNome("Interestelar");
+        Filme interestelar = new Filme("Interestelar");
         interestelar.setAnoDeLancamento(2014);
         interestelar.setIncluidoNoPlano(true);
         interestelar.setDuracaoEmMinutos(169);

@@ -8,6 +8,10 @@ public class Filme extends Titulo implements Classificacao {
     private String diretor;
     private int duracaoEmMinutos;
 
+    public Filme(String nome) {
+        this.setNome(nome);
+    }
+
     public String getDiretor() {
         return diretor;
     }
