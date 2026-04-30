@@ -88,4 +88,14 @@ public abstract class Titulo {
         return recomendacao;
     }
 
+    @Override
+    public String toString() {
+        return "Titulo{" +
+                "nome='" + nome + '\'' +
+                ", anoDeLancamento=" + anoDeLancamento +
+                ", avaliacao=" + avaliacao +
+                ", totalDeAvaliacoes=" + totalDeAvaliacoes +
+                '}';
+    }
+
 }

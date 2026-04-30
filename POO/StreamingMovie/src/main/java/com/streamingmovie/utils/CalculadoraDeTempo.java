@@ -33,4 +33,12 @@ public class CalculadoraDeTempo {
 
         this.tempoTotalSeries += titulo.getDuracaoEmMinutos();
     }
+
+    @Override
+    public String toString() {
+        return "CalculadoraDeTempo{" +
+                "tempoTotalFilmes=" + tempoTotalFilmes +
+                ", tempoTotalSeries=" + tempoTotalSeries +
+                '}';
+    }
 }

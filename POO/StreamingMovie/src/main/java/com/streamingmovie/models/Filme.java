@@ -24,5 +24,16 @@ public class Filme extends Titulo implements Classificacao {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
+    @Override
+    public String toString() {
+        return "Filme{" +
+                "nome='" + getNome() + '\'' +
+                ", anoDeLancamento=" + getAnoDeLancamento() +
+                ", diretor='" + diretor + '\'' +
+                ", duracaoEmMinutos=" + duracaoEmMinutos +
+                ", avaliacao=" + getMediaAvaliacoes() +
+                '}';
+    }
+
 }
 

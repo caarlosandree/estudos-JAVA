@@ -77,4 +77,15 @@ public class Episodio implements Classificacao {
         System.out.println("  Nota: " + (notaEpisodio > 0 ? String.format("%.1f", notaEpisodio) : "Não avaliado"));
         System.out.println("  Status: " + (assistido ? "✓ Assistido" : "○ Não assistido"));
     }
+
+    @Override
+    public String toString() {
+        return "Episodio{" +
+                "numeroEpisodio=" + numeroEpisodio +
+                ", nomeEpisodio='" + nomeEpisodio + '\'' +
+                ", duracaoEpisodio=" + duracaoEpisodio +
+                ", notaEpisodio=" + notaEpisodio +
+                ", assistido=" + assistido +
+                '}';
+    }
 }
