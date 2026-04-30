@@ -1,6 +1,6 @@
 package models;
 
-import utils.Classificacao;
+import DAO.Classificacao;
 import java.util.ArrayList;
 
 // Herança de Titulo

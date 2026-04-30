@@ -1,7 +1,5 @@
 package models;
 
-import utils.Classificacao;
-
 // Classe abstrata
 public abstract class Titulo {
     private String nome;

@@ -1,6 +1,6 @@
 package models;
 
-import utils.Classificacao;
+import DAO.Classificacao;
 
 // Herança de Titulo
 public class Filme extends Titulo implements Classificacao {

@@ -1,6 +1,6 @@
 package models;
 
-import utils.Classificacao;
+import DAO.Classificacao;
 
 public class Episodio implements Classificacao {
     private int numeroEpisodio;
