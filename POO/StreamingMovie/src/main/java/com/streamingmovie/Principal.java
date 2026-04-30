@@ -1,6 +1,9 @@
+package com.streamingmovie;
+
 // Importação de classes
 import model.Filme;
 import model.Serie;
+import model.Titulo;
 import model.Episodio;
 import services.CriarFilmes;
 import services.CriarSeries;
@@ -19,9 +22,16 @@ public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Obtendo o ArrayList de filmes e séries
+        // POLIMORFISMO: Criando catálogo unificado de títulos
+        ArrayList<Titulo> catalogo = new ArrayList<>();
+
+        // Adicionando filmes ao catálogo (upcasting automático)
         ArrayList<Filme> filmes = CriarFilmes.filmes();
+        catalogo.addAll(filmes);
+
+        // Adicionando séries ao catálogo (upcasting automático)
         ArrayList<Serie> series = CriarSeries.series();
+        catalogo.addAll(series);
 
         // Populando os episódios das séries
         if (series.size() >= 3) {
@@ -54,13 +64,13 @@ public class Principal {
 
             switch (opcao) {
                 case 1:
-                    listarFilmes(filmes, calculadora, scanner);
+                    listarFilmes(catalogo, calculadora, scanner);
                     break;
                 case 2:
-                    listarSeries(series, calculadora, scanner);
+                    listarSeries(catalogo, calculadora, scanner);
                     break;
                 case 3:
-                    listarEpisodios(series, scanner);
+                    listarEpisodios(catalogo, scanner);
                     break;
                 case 0:
                     System.out.println("Saindo do programa...");
@@ -73,8 +83,17 @@ public class Principal {
         scanner.close();
     }
 
-    private static void listarFilmes(ArrayList<Filme> filmes, CalculadoraDeTempo calculadora, Scanner scanner) {
+    private static void listarFilmes(ArrayList<Titulo> catalogo, CalculadoraDeTempo calculadora, Scanner scanner) {
         System.out.println("\n-=-=- Lista de Filmes -=-=-");
+
+        // POLIMORFISMO + INSTANCEOF: Filtrando apenas filmes do catálogo
+        ArrayList<Filme> filmes = new ArrayList<>();
+        for (Titulo titulo : catalogo) {
+            if (titulo instanceof Filme) {
+                filmes.add((Filme) titulo); // Downcasting seguro com instanceof
+            }
+        }
+
         System.out.println("Quantidade de filmes: " + filmes.size());
         System.out.println("Tempo total dos filmes: " + calculadora.getTempoTotalFilmes() / 60.0 + " hora(s)");
         System.out.println();
@@ -98,8 +117,17 @@ public class Principal {
         }
     }
 
-    private static void listarSeries(ArrayList<Serie> series, CalculadoraDeTempo calculadora, Scanner scanner) {
+    private static void listarSeries(ArrayList<Titulo> catalogo, CalculadoraDeTempo calculadora, Scanner scanner) {
         System.out.println("\n-=-=- Lista de Séries -=-=-");
+
+        // POLIMORFISMO + INSTANCEOF: Filtrando apenas séries do catálogo
+        ArrayList<Serie> series = new ArrayList<>();
+        for (Titulo titulo : catalogo) {
+            if (titulo instanceof Serie) {
+                series.add((Serie) titulo); // Downcasting seguro com instanceof
+            }
+        }
+
         System.out.println("Quantidade de séries: " + series.size());
         System.out.println("Tempo total das séries: " + calculadora.getTempoTotalSeries() / 60.0 + " hora(s)");
         System.out.println();
@@ -130,8 +158,17 @@ public class Principal {
         }
     }
 
-    private static void listarEpisodios(ArrayList<Serie> series, Scanner scanner) {
+    private static void listarEpisodios(ArrayList<Titulo> catalogo, Scanner scanner) {
         System.out.println("\n-=-=- Escolha a Série -=-=-");
+
+        // POLIMORFISMO + INSTANCEOF: Filtrando apenas séries do catálogo
+        ArrayList<Serie> series = new ArrayList<>();
+        for (Titulo titulo : catalogo) {
+            if (titulo instanceof Serie) {
+                series.add((Serie) titulo); // Downcasting seguro com instanceof
+            }
+        }
+
         for (int i = 0; i < series.size(); i++) {
             System.out.println((i + 1) + " - " + series.get(i).getNome());
         }
